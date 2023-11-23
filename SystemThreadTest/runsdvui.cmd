@@ -1,0 +1,2 @@
+cd /d "C:\Users\vboxuser\source\repos\SystemThreadTest\SystemThreadTest" &msbuild "SystemThreadTest.vcxproj" /t:sdvViewer /p:configuration="Debug" /p:platform="x64" /p:SolutionDir="C:\Users\vboxuser\source\repos\SystemThreadTest" 
+exit %errorlevel% 
