@@ -6,6 +6,8 @@
 
 int main()
 {
+	std::cout << "Caller's PID: " << GetCurrentProcessId() << '\n';
+
 	HANDLE hDevice = CreateFile(L"\\\\.\\SystemThreadTest",
 		GENERIC_WRITE, 0, nullptr, OPEN_EXISTING, 0, nullptr);
 	if (INVALID_HANDLE_VALUE == hDevice) {
