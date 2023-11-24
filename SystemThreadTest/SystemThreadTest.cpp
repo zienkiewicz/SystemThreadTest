@@ -4,8 +4,8 @@ UNICODE_STRING Name = RTL_CONSTANT_STRING(L"\\Device\\SystemThreadTest");
 UNICODE_STRING SymbolicLink = RTL_CONSTANT_STRING(L"\\??\\SystemThreadTest");
 
 void DriverUnload(PDRIVER_OBJECT DriverObject);
-NTSTATUS CreateClose(PDEVICE_OBJECT, PIRP);
-
+NTSTATUS CreateClose(PDEVICE_OBJECT DevicObject, PIRP Irp);
+NTSTATUS WorkIoctl(PDEVICE_OBJECT DeviceObject, PIRP Irp);
 
 extern "C" NTSTATUS
 DriverEntry(PDRIVER_OBJECT DriverObject, PUNICODE_STRING RegistryPath) {
@@ -37,6 +37,7 @@ DriverEntry(PDRIVER_OBJECT DriverObject, PUNICODE_STRING RegistryPath) {
 		return status;
 	}
 	
+	KdPrint(("Created symbolic link and a device object!"));
 	return STATUS_SUCCESS;
 }
 
