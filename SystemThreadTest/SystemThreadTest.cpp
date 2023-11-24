@@ -41,7 +41,7 @@ DriverEntry(PDRIVER_OBJECT DriverObject, PUNICODE_STRING RegistryPath) {
 		return status;
 	}
 	
-	KdPrint(("Created symbolic link and a device object!"));
+	KdPrint(("Created a symbolic link and a device object!"));
 	return STATUS_SUCCESS;
 }
 
