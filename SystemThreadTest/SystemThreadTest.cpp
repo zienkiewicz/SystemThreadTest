@@ -1,6 +1,5 @@
 #include <ntddk.h>
 
-
 UNICODE_STRING Name = RTL_CONSTANT_STRING(L"\\Device\\SystemThreadTest");
 UNICODE_STRING SymbolicLink = RTL_CONSTANT_STRING(L"\\??\\SystemThreadTest");
 
