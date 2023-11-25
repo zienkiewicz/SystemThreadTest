@@ -6,3 +6,5 @@ After reading some online forums, you notice some people suggesting that `PsCrea
 sc create SystemThreadTest type=kernel binPath=<path to the .sys>
 sc start SystemThreadTest
 ```
+## Result
+![result](images/result.png)
